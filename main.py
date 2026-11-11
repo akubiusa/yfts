@@ -286,7 +286,7 @@ async def youtubeThumb(ws):
             })
             await asyncio.sleep(1)
 
-            # Process 8 : Whether download video
+            # Process 8 : Whether convert video to image
             convResult = convertVideoToImage(vid)
             if isinstance(convResult, Exception):
                 print("[8] Convert video to image failed.")
