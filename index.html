@@ -230,7 +230,6 @@
 
             const ws = new WebSocket((location.protocol == "https:" ? "wss" : "ws") + "://" + location.host + "/api");
             const progressbar_element = document.getElementById("progressbar")
-            const message_element = document.getElementById("message")
             ws.onopen = function (event) {
                 message("Connected API.", "APIに接続しました。", "info");
                 console.log(event.data)
