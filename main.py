@@ -52,6 +52,7 @@ def downloadVideo(vid):
                 "https://youtu.be/{}".format(vid),
                 download=True
             )
+        return True
     except Exception as e:
         return e
 
