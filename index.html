@@ -255,7 +255,7 @@
                     document.getElementById("similar-thumbnail-link").href = "https://youtu.be/" + data.vid +
                         "?t=" + data.data.best[0];
                     time = new Date(data.data.best[0] * 1000).toISOString().substr(11, 8)
-                    document.getElementById("similar-thumbnail-rank").innerHTML =
+                    document.getElementById("similar-thumbnail-rank").textContent =
                         " (" + time + " | " + (100 - data.data.best[1]) + "%)"
                     document.getElementById("similar-thumbnail").src = "data:image/jpeg;base64," + data.best_image;
                     document.getElementById("submit").disabled = false;
@@ -281,13 +281,13 @@
 
                 const message_text = document.createElement("span");
                 message_text.classList.add("message-text");
-                message_text.innerHTML = text;
+                message_text.textContent = text;
                 message_text.classList.add("message-" + level);
                 message_line.appendChild(message_text);
 
                 const message_subtext = document.createElement("span");
                 message_subtext.classList.add("message-subtext");
-                message_subtext.innerHTML = subtext;
+                message_subtext.textContent = subtext;
                 message_subtext.classList.add("message-" + level);
                 message_line.appendChild(message_subtext);
 
