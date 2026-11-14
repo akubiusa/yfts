@@ -37,6 +37,7 @@ Requires Python 3.6+, ffmpeg and Linux (WSL works). There is no test suite, lint
 
 - Match the existing style: 4-space indentation, `.format()` string formatting, camelCase function names. Do not reformat unrelated code.
 - Every WebSocket payload carries both an English `message` and a Japanese `message_ja`. Keep both when adding steps.
+- `message` and `message_ja` are plain text rendered with `textContent` in `index.html`, so never put HTML markup in them.
 - Pipeline helpers signal failure by returning `False` or the caught `Exception` rather than raising, and the handler checks with `isinstance(result, Exception)` or a falsy check. Follow that pattern.
 - `process_code` values drive the frontend progress bar (`max="10"` in `index.html`). Keep the numbering contiguous and update `index.html` when adding steps.
 - The handler tracks connections in `clients` and deletes the entry on every early return. New exit paths must do the same.

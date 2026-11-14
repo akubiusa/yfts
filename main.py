@@ -186,7 +186,7 @@ async def youtubeThumb(ws):
                 await ws.send_json({
                     "status": False,
                     "process_code": 2,
-                    "message": "Get Video Infomation failed. <code>{}</code>".format(str(info)),
+                    "message": "Get Video Infomation failed. {}".format(str(info)),
                     "message_ja": "動画情報の取得に失敗しました"
                 })
                 await asyncio.sleep(1)
@@ -259,7 +259,7 @@ async def youtubeThumb(ws):
                 await ws.send_json({
                     "status": False,
                     "process_code": 6,
-                    "message": "Download video failed. <code>{}</code>".format(str(dlResult)),
+                    "message": "Download video failed. {}".format(str(dlResult)),
                     "message_ja": "動画のダウンロードに失敗しました。"
                 })
                 await asyncio.sleep(1)
@@ -293,7 +293,7 @@ async def youtubeThumb(ws):
                 await ws.send_json({
                     "status": False,
                     "process_code": 8,
-                    "message": "Convert video to image failed. <code>{}</code>".format(str(convResult)),
+                    "message": "Convert video to image failed. {}".format(str(convResult)),
                     "message_ja": "動画から画像への変換に失敗しました。"
                 })
                 await asyncio.sleep(1)
